@@ -1,0 +1,81 @@
+	
+ 
+         SQLs Practice 31-40
+-      ----------------------
+31) Display the maximum salary being paid to CLERK. 
+
+
+    SELECT  MAX(SALARY) FROM EMPLOYEES  WHERE JOB_TITLE = 'CLERK';
+
+
+32) Display the maximum salary being paid to depart number 20. 
+
+
+    SELECT MAX(SALARY) FROM  EMPLOYEES WHERE DEPARTMENT_ID =10;
+ 
+33) Display the minimum salary being paid to any SALESMAN. 
+
+
+    SELECT  MIN(SALARY) FROM EMPLOYEES  
+                         WHERE JOB_TITLE = 'SALESMAN';
+
+
+
+34) Display the average salary drawn by MANAGERS. 
+
+
+    SELECT AVG(SALARY) FROM EMPLOYEES
+                       WHERE JOB_TITLE = 'MANAGER'
+
+
+35) Display the total salary drawn by ANALYST working in depart number 40. 
+
+
+    SELECT SUM(SALARY) FROM 
+    
+    EMPLOYEES WHERE JOB_TITLE = 'ANALYST' AND DEPARTMENT_ID = 10;
+
+
+36) Display the names of the employee in order of salary i.e the name of  the
+employee earning lowest salary should appear first. 
+
+
+   SELECT FIRST_NAME,SALARY FROM EMPLOYEES ORDER BY SALARY ASC;
+  
+
+
+37) Display the names of the employee in descending order of salary. 
+
+
+    SELECT FIRST_NAME ,SALARY FROM EMPLOYEES ORDER BY SALARY DESC;
+
+
+
+
+38) Display  the names of the employee in order of employee name. 
+
+
+
+     SELECT FIRST_NAME  FROM EMPLOYEES ORDER BY FIRST_NAME;
+
+
+
+39) Display empno,ename,deptno,sal sort the output first base on name and 
+within name by deptno and with in deptno by sal. 
+
+
+
+    SELECT EMPLOYEE_ID,FIRST_NAME,DEPARTMENT_ID,SALARY FROM EMPLOYEES ORDER BY  
+    FIRST_NAME,DEPARTMENT_ID,SALARY ;
+
+40) Display the name of the employee along with their annual salary(sal*12).The name of the employee earning highest annual salary should apper first.  
+
+
+
+   SELECT FIRST_NAME, SALARY * 12 AS annual_salary FROM employees
+   ORDER BY annual_salary DESC;
+
+
+
+
+

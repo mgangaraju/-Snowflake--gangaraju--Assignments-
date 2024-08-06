@@ -1,0 +1,74 @@
+
+
+                Assignment-3
+         ---------------------------
+
+
+21) Display the names of employees whose names have second alphabet A in  their names. 
+
+
+  SELECT * FROM EMPLOYEES WHERE first_name like '_a%' ;
+
+
+
+22) select the names of the employee whose names is exactly five characters in length. 
+
+
+
+  SELECT FIRST_NAME FROM EMPLOYEES WHERE LENGTH (first_name)=5;
+
+
+
+23) Display the names of the employee who are not working as MANAGERS. 
+
+
+  SELECT FIRST_NAME,JOB_TITLE FROM EMPLOYEES WHERE  JOB_TITLE NOT LIKE 'MANAGER' ;
+
+
+
+24) Display the names of the employee who are not working as SALESMAN OR  CLERK
+OR ANALYST. 
+
+
+
+  SELECT FIRST_NAME,JOB_TITLE FROM EMPLOYEES WHERE  TRIM(JOB_TITLE) NOT IN('SALESMAN','CLERK' ,'ANALYST');
+
+
+25) Display all rows from emp table. The system should wait after every  screen
+full of information. 
+
+
+    SELECT * FROM EMPLOYEES;
+
+
+26) Display the total number of employee working in the company. 
+
+
+  SELECT COUNT(*) AS EMPLOYEE_ID FROM EMPLOYEES;
+
+ 
+
+27) Display the total salary begging paid to all employees. 
+
+
+  SELECT SUM(SALARY) FROM EMPLOYEES;
+
+
+28) Display the maximum salary from emp table. 
+
+
+
+   SELECT MAX(SALARY) FROM EMPLOYEES;
+
+
+
+29) Display the minimum salary from emp table. 
+
+
+   SELECT MIN(SALARY) FROM EMPLOYEES;
+ 
+
+30) Display the average salary from emp table.
+
+
+  SELECT AVG(SALARY) FROM EMPLOYEES;

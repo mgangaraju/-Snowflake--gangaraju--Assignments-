@@ -1,0 +1,77 @@
+	
+          Assignment-2
+     ---------------------
+
+ select * from employees
+11) Display the names of employees who are working as clerks, salesman or  analyst and drawing a salary more than 3000. 
+
+SELECT first_name,job_id
+FROM employees
+WHERE (JOB_ID = 9 OR JOB_ID = 6 OR JOB_ID = 5)
+  AND salary > 3000;
+
+
+
+12) Display the names of the employees who are working in the company for  the
+past 5 years; 
+
+
+
+select first_name,hire_date
+from employees
+where hire_date <= (current_date-interval '5 year');
+
+
+
+13) Display the list of employees who have joined the company before 
+30-JUN-90 or after 31-DEC-90. 
+
+
+SELECT FIRST_NAME
+FROM employees
+WHERE HIRE_DATE < '1990-06-30'
+   OR HIRE_DATE > '1990-12-31';
+
+
+14) Display current Date. 
+
+
+  SELECT CURRENT_DATE AS current_date;
+
+
+
+15) Display the list of all users in your database (use catalog table). 
+
+
+SELECT CURRENT_USER;
+
+
+16) Display the names of all tables from current user; 
+
+
+  SHOW TABLES;
+
+
+17) Display the name of the current user. 
+
+
+SELECT CURRENT_USER;     
+
+
+18) Display the names of employees working in depart number 10 or 20 or 40  or employees working as CLERKS,SALESMAN or ANALYST. 
+
+
+SELECT first_name,department_id from employees where department_id in (10,20,40);
+
+
+
+19) Display the names of employees whose name starts with alaphabet S. 
+
+SELECT * FROM EMPLOYEES WHERE FIRST_NAME LIKE'S%';
+
+
+ 
+20) Display the Employee names for employees whose name ends with alaphabet S.
+See details
+
+SELECT * FROM EMPLOYEES WHERE FIRST_NAME LIKE'%s';

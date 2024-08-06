@@ -1,0 +1,62 @@
+
+      Assignment-1
+ ----------------------------
+
+1) Display the details of all employees 
+
+
+   SELECT * FROM EMPLOYEES;
+
+
+2) Display the depart information from department table 
+
+
+   SELECT DEPARTMENT_ID,DEPARTMENT_NAME,LOCATION_ID FROM DEPARTMENTS;
+
+
+3) Display the name and job for all the employees 
+
+   SELECT FIRST_NAME,JOB_ID FROM EMPLOYEES;
+   
+
+4) Display the name and salary  for all the employees 
+ 
+
+   SELECT FIRST_NAME,SALARY FROM EMPLOYEES;
+   
+
+5) Display the employee no and totalsalary  for all the employees 
+
+
+   SELECT EMPLOYEE_ID,SALARY FROM EMPLOYEES;
+ 
+6) Display the employee name and annual salary for all employees.
+
+
+   SELECT FIRST_NAME,SALARY FROM EMPLOYEES
+
+
+7) Display the names of all the employees who are working in depart number 10. 
+
+
+   SELECT FIRST_NAME FROM EMPLOYEES WHERE DEPARTMENT_ID =10;
+   
+
+8) Display the names of all the employees who are working as clerks and  drawing a salary more than 3000. 
+
+    
+   SELECT FIRST_NAME,SALARY FROM EMPLOYEES WHERE FIRST_NAME = 'clerks' OR SALARY>=3000;
+    
+
+
+9) Display the employee number and name  who are earning comm. 
+
+
+    SELECT EMPLOYEE_ID,FIRST_NAME,SALARY FROM EMPLOYEES WHERE SALARY IN ( 
+    SELECT SALARY FROM EMPLOYEES GROUP BY SALARY HAVING COUNT(*)>1 ) ORDER BY SALARY
+
+ 
+10) Display the employee number and name  who do not earn any comm.
+
+    SELECT EMPLOYEE_ID,FIRST_NAME,SALARY FROM EMPLOYEES WHERE SALARY  IS NULL
+    
